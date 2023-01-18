@@ -505,10 +505,10 @@ class Sky:
 
         # A list to hold all dataframes for queries longer than 1000 rows
         main = []
+        temp = []
 
         # Run through ~20 pages, which will equate to 20,000 rows max
         for i in range(1, 21):
-            temp = []
             val = self.get(endpoint=f"lists/advanced/{list_id}?page={i}", raw_data=True)
             temp.append(val)
 
